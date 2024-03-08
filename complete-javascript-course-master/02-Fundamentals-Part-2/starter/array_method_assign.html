@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JavaScript Fundamentals – Part 2</title>
+    <style>
+      body {
+        height: 100vh;
+        align-items: center;
+        background: linear-gradient(to top left, #28b487, #7dd56f);
+        font-family: sans-serif;
+      }
+      h1 {
+        font-size: 50px;
+        line-height: 1.3;
+        width: 100%;
+        padding: 30px;
+        text-align: center;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Assignment - Array Meyhods</h1>
+    <p>1. Create an array containing all the neighbouring countries of a country of your 
+      choice. Choose a country which has at least 2 or 3 neighbours. Store the array 
+      into a variable called 'neighbours'
+    </p>
+    <p>2. At some point, a new country called 'Utopia' is created in the neighbourhood of 
+      your selected country. So add it to the end of the 'neighbours' array</p>
+    <p>3. Unfortunately, after some time, the new country is dissolved. So remove it from 
+      the end of the array</p>
+    <p>4. If the 'neighbours' array does not include the country ‘Germany’, log to the 
+      console: 'Probably not a central European country :D'</p>
+    <p>5. Change the name of one of your neighbouring countries. To do that, find the 
+      index of the country in the 'neighbours' array, and then use that index to 
+      change the array at that index position. For example, you can search for
+      'Sweden' in the array, and then replace it with 'Republic of Sweden'.
+    </p>
+  </body>
+  <script>
+    //point 1
+    const neighbours = ['Sri Lanka', 'Bangladesh', 'China', 'Pakistan', 'Afganistan'];
+
+    //point 2
+    neighbours.push('Utopia');
+    console.log(neighbours);
+
+    //point 3
+    neighbours.pop();
+    console.log(neighbours);
+
+    //point 4
+    if(!neighbours.includes('Germany')){
+      console.log(`Probably not a central European country :D`);
+    }
+
+    //point 5
+    // const checkindex = neighbours.indexOf('Sri Lanka');
+    // console.log(checkindex);
+    // neighbours.shift();
+    // neighbours.unshift('Republic Of Sri Lanka');
+    // console.log(neighbours);
+
+    //point 5
+    neighbours[neighbours.indexOf('Sri Lanka')] = 'Republic Of Sri Lanka';
+    console.log(neighbours);
+  </script>
+</html>

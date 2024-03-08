@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JavaScript Fundamentals – Part 2</title>
+    <style>
+      body {
+        height: 100vh;
+        align-items: center;
+        background: linear-gradient(to top left, #28b487, #7dd56f);
+        font-family: sans-serif;
+      }
+      h1 {
+        font-size: 50px;
+        line-height: 1.3;
+        width: 100%;
+        padding: 30px;
+        text-align: center;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Assignment - Array Looping, Continue and Break</h1>
+    <p>1. Let's bring back the 'populations' array from a previous assignment</p>
+    <p>2. Use a for loop to compute an array called 'percentages2' containing the 
+      percentages of the world population for the 4 population values. Use the 
+      function 'percentageOfWorld1' that you created earlier</p>
+    <p>3. Confirm that 'percentages2' contains exactly the same values as the 
+      'percentages' array that we created manually in the previous assignment, 
+      and reflect on how much better this solution is</p>
+  </body>
+  <script>
+    //point 1
+    const populations = [138, 143, 33, 27];
+    //point 2
+    const percentageOfWorld1 = population => population / 7900 * 100;
+    const percentages1 = [
+      percentageOfWorld1(populations[0]),
+      percentageOfWorld1(populations[1]),
+      percentageOfWorld1(populations[2]),
+      percentageOfWorld1(populations[3])
+    ];
+    console.log(percentages1);
+    
+    const percentages2 = [];
+    for(let i = 0;i < populations.length;i++){
+      const populationPercentage = percentageOfWorld1(populations[i]);
+      percentages2.push(populationPercentage);
+    }
+    console.log(percentages2);
+  </script>
+</html>

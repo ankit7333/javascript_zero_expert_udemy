@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(255, 247, 201);
+  font-family: Arial;
+  font-size: 20px;
+  /* padding: 10px; */
+}
+
+h1 {
+  font-size: 35px;
+  margin-bottom: 25px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+.first {
+  color: red;
+}
+
+#your-name {
+  background-color: rgb(255, 220, 105);
+  border: 5px solid #444;
+  width: 400px;
+  padding: 25px;
+  margin-top: 30px;
+}
+
+input,
+button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+a {
+  background-color: yellowgreen;
+}
+
+#course-image {
+  width: 300px;
+}
+
+#your-name h2 {
+  color: olivedrab;
+}
+
+.tabslider {
+  max-width: 100rem;
+  height: 50rem;
+  margin: 0 auto;
+  position: relative;
+
+  /* IN THE END */
+  overflow: hidden;
+}
+
+.slidecontainer {
+  position: absolute;
+  top: 0;
+  width: 80%;
+  height: 50rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* THIS creates the animation! */
+  transition: transform 1s;
+  background-color: aqua;
+}
+.slidecontainer:last-child{
+  background-color: bisque;
+  right: 0;
+}
+
+.tabcontainer {
+  display: flex;
+}
+.tab {
+  opacity: 0.7;
+  height: 40px;
+  width: 20%;
+  cursor: pointer;
+  transition: all 0.5s;
+  z-index: 1;
+  border:0;
+  background-color:transparent;
+}
+.tab--active {
+  opacity: 1;
+  width: 80%;
+  border:1px solid;
+}

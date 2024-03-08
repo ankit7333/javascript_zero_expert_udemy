@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JavaScript Fundamentals – Part 2</title>
+    <style>
+      body {
+        height: 100vh;
+        align-items: center;
+        background: linear-gradient(to top left, #28b487, #7dd56f);
+        font-family: sans-serif;
+      }
+      h1 {
+        font-size: 50px;
+        line-height: 1.3;
+        width: 100%;
+        padding: 30px;
+        text-align: center;
+        color: white;
+      }
+      p{font-size:18px;font-weight:600;}
+    </style>
+    <script>
+    </script>
+  </head>
+  <body>
+    <h1>Coding Challenge #3</h1>
+    <div>
+      <p class="question">
+        Let's go back to Mark and John comparing their BMIs! This time, let's use objects to implement the calculations! 
+        Remember: BMI = mass / height ** 2 = mass / (height * height) (mass in kg and height in meter)
+      </p>
+      <h4>Your Tasks :-</h4>
+      <ul>
+        <li>1. For each of them, create an object with properties for their full name, mass, and 
+          height (Mark Miller and John Smith)</li>
+        <li>2. Create a 'calcBMI' method on each object to calculate the BMI (the same method on both objects).
+          Store the BMI value to a property, and also return it from the method</li>
+        <li>3. Log to the console who has the higher BMI, together with the full name and the 
+          respective BMI. Example: "John's BMI (28.3) is higher than Mark's (23.9)!"</li>
+      </ul>
+      <h4>Test data:</h4>
+      <ul>
+        <li>test data: Kamlesh weights 78 kg and is 1.69 m tall. Sukhraj weights 92 kg and is 1.95 m 
+          tal</li>
+      </ul>
+      <div>
+        <h4>Solution :</h4>
+        <p id="markbmi"></p>
+        <p id="johnbmi"></p>
+        <p id="greaterbmi"></p>
+      </div>
+    </div>
+  </body>
+  <script>
+    //point 1
+    const mark = {
+      fullName: 'Mark Miller',
+      mass: 78,
+      height: 1.69,
+      //point 2
+      calcBMI: function(){
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi;
+      }
+    }
+    const john = {
+      fullName: 'John Smith',
+      mass: 92,
+      height: 1.95,
+      //point 2
+      calcBMI: function(){
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi;
+      }
+    }
+    mark.calcBMI();
+    john.calcBMI();
+    console.log(mark.bmi, john.bmi);
+    //point 3
+    let greaterBMI;
+    if(mark.bmi > john.bmi){
+      greaterBMI = `${mark.fullName}'s BMI ${mark.bmi} is higher than ${john.fullName}'s BMI ${john.bmi}`;
+    }else if(mark.bmi < john.bmi){
+      greaterBMI = `${john.fullName}'s BMI ${john.bmi} is higher than ${mark.fullName}'s BMI ${mark.bmi}`;
+    }else if(mark.bmi == john.bmi){
+      greaterBMI = `${mark.fullName}'s BMI ${mark.bmi} is equal to ${john.fullName}'s BMI ${john.bmi}`;
+    }
+    document.getElementById('markbmi').innerHTML = 'Mark BMI :- ' + mark.bmi;
+    document.getElementById('johnbmi').innerHTML = `John BMI :- ${john.bmi}`;
+    document.getElementById('greaterbmi').innerHTML = greaterBMI;
+  </script>
+</html>

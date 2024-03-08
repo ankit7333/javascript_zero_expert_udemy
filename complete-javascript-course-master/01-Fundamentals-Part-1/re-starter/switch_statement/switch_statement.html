@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Switch Statement JavaScript Fundamentals – Part 1</title>
+    <style>
+      body {
+        height: 100vh;
+        align-items: center;
+        background: linear-gradient(to top left, #28b487, #7dd56f);
+        font-family: sans-serif;
+      }
+      h1 {
+        font-size: 50px;
+        line-height: 1.3;
+        width: 100%;
+        padding: 30px;
+        text-align: center;
+        color: white;
+      }
+      .highlight{color:#fff;font-weight:600;font-size:14px;background-color:#000;padding:5px;line-height:24px;}
+      button{
+        background:transparent;border:none;padding:0;
+      }
+      .star{position:relative;display:inline-block;width:0;height:0;margin-left:.9em;margin-right:.9em;
+        margin-bottom:1.2em;border-right:5px solid transparent;border-bottom:11px solid #ccc;
+        border-left:5px solid transparent;font-size:16px;border-top:0;
+      }
+      .star > span{z-index:1;display:inline-flex;position:absolute;top:8px;left:-4px;}
+      .star:before, .star:after{
+        content:'';display:block;width:0;height:0;position:absolute;top:.6em;left:-1em;
+        border-right:16px solid transparent;border-bottom:11px solid #ccc;border-left:16px solid transparent;
+        transform:rotate(-35deg);
+      }
+      .star:after{
+        transform:rotate(35deg);
+      }
+      .star.orange{
+        border-bottom:11px solid #FC0;
+      }
+      .star.orange:after, .star.orange:before{
+        border-bottom:11px solid #FC0;
+      }
+      .star.orange > span{
+        color:#fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h3>Switch Statement</h3>
+      <p>The switch statement is used to perform different actions based on different conditions.</p>
+    </div>
+    <hr/>
+    <div class="start__wrap">
+      
+    </div>
+  </body>
+  <script src="switch_statement.js"></script>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JavaScript Fundamentals – Part 1</title>
+    <style>
+      body {
+        height: 100vh;
+        align-items: center;
+        background: linear-gradient(to top left, #28b487, #7dd56f);
+        font-family: sans-serif;
+      }
+      h1 {
+        font-size: 50px;
+        line-height: 1.3;
+        width: 100%;
+        padding: 30px;
+        text-align: center;
+        color: white;
+      }
+    </style>
+    <script>
+
+    </script>
+  </head>
+  <body>
+    <h1>Assignment - Logical Opreator 'AND &&', 'OR ||' & 'NOT !'</h1>
+    <p>Let's say Sarah is looking for a new country to live in. She wants to live in a 
+      country that speaks english, has less than 50 million people and is not an 
+      island.</p>
+    <p>Write an if statement to help Sarah figure out if your country is right for her. 
+      You will need to write a condition that accounts for all of Sarah's criteria. Take 
+      your time with this, and check part of the solution if necessary</p>
+    <p>If yours is the right country, log a string like this: 'You should live in Portugal :)'. If 
+      not, log 'Portugal does not meet your criteria :(</p>
+    <script>
+        let speakEnglish = true;
+        let isIsland = false;
+        let yourCountry = 'Canada';
+        let newCountry = 'Portugal';
+        let sarahPopulation = 500000000;
+        let population = 50000000 <= sarahPopulation;
+        if(speakEnglish && !isIsland && population){
+          console.log(`You should live in ${newCountry}!`);
+        }else if(speakEnglish || isIsland && population){
+          console.log(`${yourCountry} does not meet your criteria`);
+        }else{
+          console.log(`${newCountry} does not meet your criteria`);
+        }
+    </script>
+  </body>
+</html>

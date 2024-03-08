@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JavaScript Fundamentals – Part 1</title>
+    <style>
+      body {
+        height: 100vh;
+        align-items: center;
+        background: linear-gradient(to top left, #28b487, #7dd56f);
+        font-family: sans-serif;
+      }
+      h1 {
+        font-size: 50px;
+        line-height: 1.3;
+        width: 100%;
+        padding: 30px;
+        text-align: center;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Assignment - Ternary Operator</h1>
+    <p>1. If your country's population is greater than 33 million, use the ternary operator 
+      to log a string like this to the console: 'Portugal's population is above average'. 
+      Otherwise, simply log 'Portugal's population is below average'. Notice how only
+      one word changes between these two sentences!</p>
+      <p>2. After checking the result, change the population temporarily to 13 and then to 
+        130. See the different results, and set the population back to original</p>
+  </body>
+  <script>
+    let portugalPopulation = 130000000;
+    let yourCountry = "Portugal's"
+    let portugalPopulationAvg = 33000000 < portugalPopulation ? `${yourCountry} is above average` : `${yourCountry} is below average`;
+    console.log(portugalPopulationAvg);
+  </script>
+</html>

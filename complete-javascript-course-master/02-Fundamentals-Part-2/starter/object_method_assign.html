@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JavaScript Fundamentals – Part 2</title>
+    <style>
+      body {
+        height: 100vh;
+        align-items: center;
+        background: linear-gradient(to top left, #28b487, #7dd56f);
+        font-family: sans-serif;
+      }
+      h1 {
+        font-size: 50px;
+        line-height: 1.3;
+        width: 100%;
+        padding: 30px;
+        text-align: center;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Assignment - Object Methods</h1>
+    <p>1. Add a method called 'describe' to the 'myCountry' object. This method 
+      will log a string to the console, similar to the string logged in the previous 
+      assignment, but this time using the 'this' keyword.</p>
+    <p>2. Call the 'describe' method</p>
+    <p>3. Add a method called 'checkIsland' to the 'myCountry' object. This 
+      method will set a new property on the object, called 'isIsland'. 
+      'isIsland' will be true if there are no neighbouring countries, and false if 
+      there are. Use the ternary operator to set the property.</p>
+  </body>
+  <script>
+    const myCountry = {
+      country: 'India',
+      capital: 'Delhi',
+      language: 'Hindi',
+      population: 138,
+      neighbours: ['Pakistan', 'China', 'Sri Lanka', 'Bangladesh'],
+      //point 1
+      describe: function(){
+        console.log(`${this.country} has ${this.population} million population.`);
+      },
+      //point 3
+      checkIsland: function(){
+        this.isIsland = this.neighbours.length == 0 ? true : false;
+      }
+    }
+    //point 2
+    myCountry.describe();
+    myCountry.checkIsland();
+    console.log(myCountry);
+  </script>
+</html>

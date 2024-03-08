@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JavaScript Fundamentals – Part 1</title>
+    <style>
+      body {
+        height: 100vh;
+        align-items: center;
+        background: linear-gradient(to top left, #28b487, #7dd56f);
+        font-family: sans-serif;
+      }
+      h1 {
+        font-size: 50px;
+        line-height: 1.3;
+        width: 100%;
+        padding: 30px;
+        text-align: center;
+        color: white;
+      }
+    </style>
+    <script>
+
+    </script>
+  </head>
+  <body>
+    <h1>Assignment - Switch Statement</h1>
+    <p>1. Use a switch statement to log the following string for the given 'language':
+      chinese or mandarin: 'MOST number of native speakers!'
+      spanish: '2nd place in number of native speakers'
+      english: '3rd place'
+      hindi: 'Number 4'
+      arabic: '5th most spoken language'
+      for all other simply log 'Great language too :D'</p>
+    <script>
+        let language = 'hindi';
+        switch(language){
+          case 'chinese':
+          case 'mandarin':
+            console.log('MOST number of native speakers!');
+            break;
+          case 'spanish':
+            console.log('2nd place in number of native speakers');
+            break;
+          case 'english':
+            console.log('3rd place');
+            break;
+          case 'hindi':
+            console.log('Number 4');
+            break;
+          case 'arabic':
+            console.log('5th most spoken language');
+            break;
+          default:
+            console.log('Great language too :D');
+        }
+    </script>
+  </body>
+</html>

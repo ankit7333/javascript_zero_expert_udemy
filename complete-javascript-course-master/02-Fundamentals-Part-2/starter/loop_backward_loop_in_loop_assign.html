@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JavaScript Fundamentals – Part 2</title>
+    <style>
+      body {
+        height: 100vh;
+        align-items: center;
+        background: linear-gradient(to top left, #28b487, #7dd56f);
+        font-family: sans-serif;
+      }
+      h1 {
+        font-size: 50px;
+        line-height: 1.3;
+        width: 100%;
+        padding: 30px;
+        text-align: center;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Assignment - Loops Backwards, Loops in Loops</h1>
+    <p>1. Store this array of arrays into a variable called 'listOfNeighbours'
+      [['Canada', 'Mexico'], ['Spain'], ['Norway', 'Sweden', 
+      'Russia']];</p>
+    <p>2. Log only the neighbouring countries to the console, one by one, not the entire 
+      arrays. Log a string like 'Neighbour: Canada' for each country</p>
+    <p>3. You will need a loop inside a loop for this. This is actually a bit tricky, so don't 
+      worry if it's too difficult for you! But you can still try to figure this out anyway</p>
+  </body>
+  <script>
+    'use strict';
+    //point 1
+    const listOfNeighbours = [
+      ['Canada', 'Mexico'], 
+      ['Spain'],
+      ['Norway', 'Sweden', 'Russia']
+    ];
+    //point 2 and point 3
+    for(let i = 0; i < listOfNeighbours.length; i++){
+      for(let y = 0;y < listOfNeighbours[i].length;y++){
+        console.log(`Neighbour: ${listOfNeighbours[i] [y]}`);
+      }
+    }
+  </script>
+</html>
